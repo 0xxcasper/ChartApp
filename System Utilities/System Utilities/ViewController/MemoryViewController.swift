@@ -10,7 +10,6 @@ import Charts
 class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableViewDataSource
 {
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var freeMemoryLabel: UILabel!
     @IBOutlet weak var usedMemoryLabel: UILabel!
     
