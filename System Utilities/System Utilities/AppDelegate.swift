@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     private func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        UINavigationBar.appearance().barTintColor = .blue
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.45, green:0.44, blue:0.87, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, 64),

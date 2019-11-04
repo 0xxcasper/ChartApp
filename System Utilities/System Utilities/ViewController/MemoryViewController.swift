@@ -24,7 +24,7 @@ class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         // Header
-        self.headerView.backgroundColor = .blue
+        self.headerView.backgroundColor = UIColor(red:0.53, green:0.44, blue:0.76, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),

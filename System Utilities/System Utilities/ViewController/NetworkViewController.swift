@@ -20,7 +20,7 @@ class NetworkViewController: BasePieViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         // Header
-        self.headerView.backgroundColor = .blue
+        self.headerView.backgroundColor = UIColor(red:0.93, green:0.35, blue:0.58, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),
@@ -135,7 +135,11 @@ class NetworkViewController: BasePieViewController, UITableViewDelegate, UITable
             break
         case 2:
             cell.titleLabel.text    = "IP Address:" + SystemValue.currentIPAddress
-            cell.subTitleLabel.text = "IP Address:" + SystemValue.cellIPAddress
+            if let ipAddress = SystemValue.cellIPAddress {
+                cell.subTitleLabel.text = "IP Address:" + ipAddress
+            } else {
+                cell.subTitleLabel.text = "IP Address:"
+            }
             break
         case 3:
             cell.titleLabel.text    = "Data Send:" + self.getWifiDataSend()

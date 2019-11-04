@@ -30,7 +30,7 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
         super.viewDidLoad()
         
         // Header
-        self.headerView.backgroundColor = .blue
+        self.headerView.backgroundColor = UIColor(red:0.45, green:0.44, blue:0.87, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),

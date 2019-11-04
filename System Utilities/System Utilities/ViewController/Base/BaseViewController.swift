@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
         let image = UIImage(named: "BackButton")
         self.backButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
         self.backButton.setImage(image, for: UIControl.State.normal)
-        self.backButton.addTarget(self, action: Selector(("backButtonTouch")), for: UIControl.Event.touchUpInside)
+        self.backButton.addTarget(self, action: #selector(backButtonTouch), for: UIControl.Event.touchUpInside)
         
         // Add navigation back button
         if self.navigationController?.viewControllers.count ?? 0 > 1 {
@@ -29,7 +29,7 @@ class BaseViewController: UIViewController {
         }
     }
 
-    func backButtonTouch () -> Void {
+    @objc func backButtonTouch () -> Void {
         self.navigationController?.popViewController(animated: true)
     }
     

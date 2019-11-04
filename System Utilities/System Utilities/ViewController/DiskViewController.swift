@@ -22,7 +22,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         // Header
-//        self.headerView.backgroundColor =
+        self.headerView.backgroundColor = UIColor(red:0.23, green:0.86, blue:0.82, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),

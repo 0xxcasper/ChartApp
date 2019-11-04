@@ -15,7 +15,7 @@ class BatteryViewController: BasePieViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
         
         // Header
-        self.headerView.backgroundColor = .blue
+        self.headerView.backgroundColor = UIColor(red:0.4, green:0.27, blue:0.74, alpha:1)
 //            GradientColor(
 //                UIGradientStyle.TopToBottom,
 //                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),
