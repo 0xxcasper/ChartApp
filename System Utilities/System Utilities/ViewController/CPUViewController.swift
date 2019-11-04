@@ -186,11 +186,13 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
         l.enabled = false
         
         // Set data
-        var yVals1: Array<BarChartDataEntry> = Array()
-        yVals1.append(BarChartDataEntry(x: value, y: 0))
-        yVals1.append(BarChartDataEntry(x: 100 - value, y: 1))
+        let values = [Double(value), Double(100 - value)]
+        var dataEntries: Array<BarChartDataEntry> = Array()
+        for i: Int in 0...values.count - 1 {
+            dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
+        }
         
-        let dataSet = PieChartDataSet (entries: yVals1, label: "Test")
+        let dataSet = PieChartDataSet(entries: dataEntries, label: "Test")
         dataSet.drawValuesEnabled = false
         dataSet.colors = [color, UIColor(red:0.88, green:0.88, blue:0.89, alpha:1)]
         
