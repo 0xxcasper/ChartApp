@@ -60,11 +60,12 @@ class BatteryViewController: BasePieViewController, UITableViewDelegate, UITable
         self.chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4, easingOption: ChartEasingOption.easeOutBack)
         
         // Set data
-        var yVals1: Array<BarChartDataEntry> = Array()
-        yVals1.append(BarChartDataEntry(x: Double(useMemory), y: 0))
-        yVals1.append(BarChartDataEntry(x: Double(100 - useMemory), y: 1))
-        
-        let dataSet = PieChartDataSet (entries: yVals1, label: "Test")
+        let values = [Double(useMemory), Double(100 - useMemory)]
+        var dataEntries: Array<BarChartDataEntry> = Array()
+        for i: Int in 0...values.count - 1 {
+            dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
+        }
+        let dataSet = PieChartDataSet(entries: dataEntries, label: "Test")
         dataSet.drawValuesEnabled = false
         dataSet.colors = [UIColor(red:0.49, green:0.91, blue:0.32, alpha:1),
             UIColor(red:0.62, green:0.6, blue:0.87, alpha:1)]

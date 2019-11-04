@@ -65,13 +65,14 @@ class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableV
         let free     = SystemValue.freeMemoryinPercent
         
         // Set data
-        var yVals1: Array<BarChartDataEntry> = Array()
-        yVals1.append(BarChartDataEntry(x: Double(active), y: 0))
-        yVals1.append(BarChartDataEntry(x: Double(wired), y: 1))
-        yVals1.append(BarChartDataEntry(x: Double(inactive), y: 2))
-        yVals1.append(BarChartDataEntry(x: Double(free), y: 3))
         
-        let dataSet = PieChartDataSet(entries: yVals1, label: "")
+        let values = [Double(active), Double(wired), Double(inactive), Double(free)]
+        var dataEntries: Array<BarChartDataEntry> = Array()
+        for i: Int in 0...values.count - 1 {
+            dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
+        }
+        
+        let dataSet = PieChartDataSet(entries: dataEntries, label: "")
         dataSet.drawValuesEnabled = false
         dataSet.colors = self.pieColors
         

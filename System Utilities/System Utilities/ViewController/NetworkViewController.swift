@@ -93,9 +93,11 @@ class NetworkViewController: BasePieViewController, UITableViewDelegate, UITable
         let wwanSentPercent = (wwanSent * 100)/(wwanSent + wwanReceived)
         
         // Set data
+        let values = [Double(wwanSentPercent), Double(100 - wwanSentPercent)]
         var dataEntries: Array<BarChartDataEntry> = Array()
-        dataEntries.append(BarChartDataEntry(x: Double(wwanSentPercent), y: 0))
-        dataEntries.append(BarChartDataEntry(x: Double(100 - wwanSentPercent), y: 1))
+        for i: Int in 0...values.count - 1 {
+            dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
+        }
         
         let dataSet = PieChartDataSet(entries: dataEntries, label: "")
         dataSet.drawValuesEnabled = false

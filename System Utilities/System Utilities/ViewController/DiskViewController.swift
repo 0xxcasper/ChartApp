@@ -30,7 +30,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
 //                    UIColor(red:0.54, green:0.35, blue:0.85, alpha:1)])
         
         // Setup tableview
-        let foolterView = UIView ()
+        let foolterView = UIView()
         foolterView.backgroundColor = self.tableView.backgroundColor
         self.tableView.tableFooterView = foolterView
     }
@@ -84,17 +84,18 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         l.enabled = false
         self.chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4, easingOption: ChartEasingOption.easeOutBack)
         
-        let systemService = SystemServices()
-        let freeDisk = Float(systemService.longFreeDiskSpace)/1024/1024
-        let fullDisk = Float(systemService.longDiskSpace)/1024/1024
+        let freeDisk = Float(SSDiskInfo.longFreeDiskSpace())/1024/1024
+        let fullDisk = Float(SSDiskInfo.longDiskSpace())/1024/1024
         let freeDisPercent = Float((freeDisk * 100))/fullDisk;
         
         // Set data
+        let values = [Double(freeDisPercent), Double(100 - freeDisPercent)]
         var dataEntries: Array<BarChartDataEntry> = Array()
-        dataEntries.append(BarChartDataEntry(x: Double(freeDisPercent), y: 0))
-        dataEntries.append(BarChartDataEntry(x: Double(100 - freeDisPercent), y: 1))
+        for i: Int in 0...values.count - 1 {
+            dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
+        }
         
-        let dataSet = PieChartDataSet (entries: dataEntries, label: "")
+        let dataSet = PieChartDataSet(entries: dataEntries, label: "")
         dataSet.drawValuesEnabled = false
         dataSet.colors = [
             UIColor(red:0.37, green:0.89, blue:0.8, alpha:1),
