@@ -1062,7 +1062,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-System Utilities/Pods-System Utilities-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E40025EEA78781A789629941 /* [CP] Check Pods Manifest.lock */ = {
