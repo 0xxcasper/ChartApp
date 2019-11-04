@@ -7,7 +7,7 @@ target 'System Utilities' do
 
   # Pods for System Utilities
 
-pod 'Google-Mobile-Ads-SDK'
+#pod 'Google-Mobile-Ads-SDK'
 pod 'Flurry-iOS-SDK'
 pod 'Charts'
 pod 'iRate'

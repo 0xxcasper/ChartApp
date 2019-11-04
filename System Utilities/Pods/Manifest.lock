@@ -5,42 +5,12 @@ PODS:
   - Flurry-iOS-SDK (10.0.2):
     - Flurry-iOS-SDK/FlurrySDK (= 10.0.2)
   - Flurry-iOS-SDK/FlurrySDK (10.0.2)
-  - Google-Mobile-Ads-SDK (7.51.0):
-    - GoogleAppMeasurement (~> 6.0)
-  - GoogleAppMeasurement (6.1.3):
-    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
-    - GoogleUtilities/MethodSwizzler (~> 6.0)
-    - GoogleUtilities/Network (~> 6.0)
-    - "GoogleUtilities/NSData+zlib (~> 6.0)"
-    - nanopb (~> 0.3.901)
-  - GoogleUtilities/AppDelegateSwizzler (6.3.1):
-    - GoogleUtilities/Environment
-    - GoogleUtilities/Logger
-    - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.3.1)
-  - GoogleUtilities/Logger (6.3.1):
-    - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.3.1):
-    - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.3.1):
-    - GoogleUtilities/Logger
-    - "GoogleUtilities/NSData+zlib"
-    - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.3.1)"
-  - GoogleUtilities/Reachability (6.3.1):
-    - GoogleUtilities/Logger
   - iRate (1.12.2)
-  - nanopb (0.3.9011):
-    - nanopb/decode (= 0.3.9011)
-    - nanopb/encode (= 0.3.9011)
-  - nanopb/decode (0.3.9011)
-  - nanopb/encode (0.3.9011)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Charts
   - Flurry-iOS-SDK
-  - Google-Mobile-Ads-SDK
   - iRate
   - SVProgressHUD
 
@@ -48,23 +18,15 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Charts
     - Flurry-iOS-SDK
-    - Google-Mobile-Ads-SDK
-    - GoogleAppMeasurement
-    - GoogleUtilities
     - iRate
-    - nanopb
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
   Flurry-iOS-SDK: 71da0ebf2088b15d8899da71050efc8b33bfd21f
-  Google-Mobile-Ads-SDK: 5c625884f0788d22b48e3bb641e1d65c673dc7a5
-  GoogleAppMeasurement: 434cc7be25e71dc04b8d0e3079125127b330e84a
-  GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   iRate: 4fc69958788624545e5d050c8ffd20884013c3f1
-  nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: d1e091ae327d89bb11842f67d8b47c0d3510a606
+PODFILE CHECKSUM: 33b200ce25e7c48df8d304c3e034929632b9259e
 
 COCOAPODS: 1.7.1
