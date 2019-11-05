@@ -387,6 +387,7 @@
                         <outlet property="subTitleLabel" destination="9ub-Ee-bsM" id="NE3-6c-3qP"/>
                         <outlet property="tableView" destination="k39-gF-6bu" id="bc0-le-kXF"/>
                         <outlet property="titleLabel" destination="Pwa-UM-zhN" id="L4j-uT-paJ"/>
+                        <outlet property="viewGradient" destination="gDD-FA-6G6" id="ygz-Z6-hEY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pcu-fO-gBU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -601,6 +602,7 @@
                         <outlet property="tableView" destination="skF-hR-60T" id="ong-Yb-Ss2"/>
                         <outlet property="titleLabel" destination="4Za-uR-uVO" id="2Z7-0b-vuR"/>
                         <outlet property="usedMemoryLabel" destination="Nj2-Jp-AOL" id="7Xn-93-bkj"/>
+                        <outlet property="viewGradient" destination="j0A-XK-vjM" id="U0j-uu-KJm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1S-zF-iwd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -808,6 +810,7 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                         <outlet property="tableView" destination="l4y-cg-oxR" id="o9X-4j-Ha2"/>
                         <outlet property="titleLabel" destination="Jmn-lQ-yyS" id="teh-56-jaz"/>
                         <outlet property="usedSpaceLabel" destination="FS2-cd-fT9" id="Ek4-LZ-1nv"/>
+                        <outlet property="viewGradient" destination="MnX-Zr-7dg" id="C4N-72-Chu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LX1-5I-fXh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1110,6 +1113,7 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                         <outlet property="subTitleLabel" destination="yPG-gW-QYN" id="SyV-mp-TT3"/>
                         <outlet property="tableView" destination="jI3-Th-b9J" id="zUA-BD-9wt"/>
                         <outlet property="titleLabel" destination="keD-8L-jWB" id="Hdx-Bh-4Yi"/>
+                        <outlet property="viewGradient" destination="Owa-Tb-DOk" id="1kL-kq-DbR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xm-5F-COl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1306,6 +1310,7 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                         <outlet property="systemChartView" destination="8rE-aO-cS9" id="4wN-tL-AuS"/>
                         <outlet property="titleLabel" destination="eVO-7b-hv8" id="n8J-Pb-BxG"/>
                         <outlet property="userChartView" destination="yld-UF-bvW" id="Wdq-eI-2u3"/>
+                        <outlet property="viewGradient" destination="Iwb-gT-izy" id="MyF-Bd-pDB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDE-y5-ZjI" userLabel="First Responder" sceneMemberID="firstResponder"/>

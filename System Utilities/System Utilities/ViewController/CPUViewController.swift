@@ -13,7 +13,7 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
     @IBOutlet weak var userChartView: PieChartView!
     @IBOutlet weak var systemChartView: PieChartView!
     @IBOutlet weak var niceChartView: PieChartView!
-    
+    @IBOutlet weak var viewGradient: UIView!
     private var glGraph: GLLineGraph?
     private var userColor = UIColor(red:0.34, green:0.89, blue:0.79, alpha:1)
     private var systemColor = UIColor(red:0.61, green:0.62, blue:0.98, alpha:1)
@@ -62,6 +62,11 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
         self.userChartView.backgroundColor = UIColor.white
         self.systemChartView.backgroundColor = UIColor.white
         self.niceChartView.backgroundColor = UIColor.white
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewGradient.setGradientBackground(colorTop: UIColor(red:0.45, green:0.44, blue:0.87, alpha:1), colorBottom: UIColor(red:0.38, green:0.67, blue:0.69, alpha:1))
     }
     
     override func viewWillAppear(_ animated: Bool) {

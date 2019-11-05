@@ -15,7 +15,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var freeSpaceLabel: UILabel!
     @IBOutlet weak var usedSpaceLabel: UILabel!
-    
+    @IBOutlet weak var viewGradient: UIView!
     private var storageInfo: StorageInfo?
 
     override func viewDidLoad() {
@@ -33,6 +33,11 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         let foolterView = UIView()
         foolterView.backgroundColor = self.tableView.backgroundColor
         self.tableView.tableFooterView = foolterView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewGradient.setGradientBackground(colorTop: UIColor(red:0.23, green:0.86, blue:0.82, alpha:1), colorBottom: UIColor(red:0.54, green:0.35, blue:0.85, alpha:1))
     }
     
     override func viewWillAppear(_ animated: Bool) {

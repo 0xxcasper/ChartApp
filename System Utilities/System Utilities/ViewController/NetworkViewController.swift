@@ -15,7 +15,7 @@ class NetworkViewController: BasePieViewController, UITableViewDelegate, UITable
     @IBOutlet weak var sendLabel: UILabel!
     @IBOutlet weak var cicleWifiView: UIView!
     @IBOutlet weak var cicle3GView: UIView!
-    
+    @IBOutlet weak var viewGradient: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +37,11 @@ class NetworkViewController: BasePieViewController, UITableViewDelegate, UITable
         self.cicleWifiView.layer.cornerRadius = self.cicleWifiView.width/2
         self.cicle3GView.clipsToBounds = true
         self.cicleWifiView.clipsToBounds = true
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewGradient.setGradientBackground(colorTop: UIColor(red:0.93, green:0.35, blue:0.58, alpha:1), colorBottom: UIColor(red:0.21, green:0.28, blue:0.52, alpha:1))
     }
     
     override func viewWillAppear(_ animated: Bool) {

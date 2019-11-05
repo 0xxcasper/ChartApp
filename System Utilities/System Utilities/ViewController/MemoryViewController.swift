@@ -13,6 +13,7 @@ class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var freeMemoryLabel: UILabel!
     @IBOutlet weak var usedMemoryLabel: UILabel!
     
+    @IBOutlet weak var viewGradient: UIView!
     let pieColors = [
         UIColor(red:0.65, green:0.64, blue:0.99, alpha:1),
         UIColor(red:0.36, green:0.89, blue:1, alpha:1),
@@ -35,6 +36,11 @@ class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableV
         let foolterView = UIView ()
         foolterView.backgroundColor = self.tableView.backgroundColor
         self.tableView.tableFooterView = foolterView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewGradient.setGradientBackground(colorTop: UIColor(red:0.53, green:0.44, blue:0.76, alpha:1), colorBottom: UIColor(red:0.21, green:0.28, blue:0.52, alpha:1))
     }
     
     override func viewWillAppear(_ animated: Bool) {

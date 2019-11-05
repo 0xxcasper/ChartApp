@@ -10,6 +10,7 @@ import Charts
 class BatteryViewController: BasePieViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!    
+    @IBOutlet weak var viewGradient: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,11 @@ class BatteryViewController: BasePieViewController, UITableViewDelegate, UITable
         if let info = SystemMonitor.batteryInfoCtrl().getBatteryInfo() {
             self.subTitleLabel.text = String (format: "%ld mAh", info.capacity)
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.viewGradient.setGradientBackground(colorTop: UIColor(red:0.4, green:0.27, blue:0.74, alpha:1), colorBottom: UIColor(red:0.51, green:0.5, blue:0.92, alpha:1))
     }
     
     override func viewWillAppear(_ animated: Bool) {
