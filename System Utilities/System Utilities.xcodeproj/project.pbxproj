@@ -142,6 +142,7 @@
 		48E4BF551C3FA26C00477FE6 /* BasePieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4BF531C3FA26C00477FE6 /* BasePieViewController.swift */; };
 		48E4BF561C3FA26C00477FE6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4BF541C3FA26C00477FE6 /* BaseViewController.swift */; };
 		48E4BF581C3FB68900477FE6 /* DiskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4BF571C3FB68900477FE6 /* DiskViewController.swift */; };
+		8489636723717FD7008F4B2C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489636623717FD7008F4B2C /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -366,6 +367,7 @@
 		48E4BF531C3FA26C00477FE6 /* BasePieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePieViewController.swift; sourceTree = "<group>"; };
 		48E4BF541C3FA26C00477FE6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		48E4BF571C3FB68900477FE6 /* DiskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskViewController.swift; sourceTree = "<group>"; };
+		8489636623717FD7008F4B2C /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FDBBE44A6C5AF9C50A8410E5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -516,6 +518,7 @@
 				481418EE1C35190E0092BFC7 /* System_Utilities-Header.h */,
 				481418F21C351E920092BFC7 /* Constant.swift */,
 				48A270491C40B71800B8EF87 /* route.h */,
+				8489636523717FC2008F4B2C /* Extensions */,
 				481418F41C35257C0092BFC7 /* Library */,
 				481418EF1C351CB90092BFC7 /* View */,
 				481418D11C3517DC0092BFC7 /* Helper */,
@@ -922,6 +925,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8489636523717FC2008F4B2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8489636623717FD7008F4B2C /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1183,6 +1194,7 @@
 				485F9E8A1C43C4AF002A6921 /* DeviceInfo.m in Sources */,
 				48A270B91C40B98700B8EF87 /* SSMemoryInfo.m in Sources */,
 				485F9E871C43C4AF002A6921 /* CPUInfoController.m in Sources */,
+				8489636723717FD7008F4B2C /* UIView+Extension.swift in Sources */,
 				4809E32F1C43BAE2005898E3 /* GeneralViewController.swift in Sources */,
 				485F9E851C43C4AF002A6921 /* BatteryInfoController.m in Sources */,
 				4809E32B1C4368CF005898E3 /* NetworkTableViewCell.swift in Sources */,
