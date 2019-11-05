@@ -169,8 +169,8 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
         let paragraphStyle = NSMutableParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.lineBreakMode = NSLineBreakMode.byTruncatingTail
         paragraphStyle.alignment = NSTextAlignment.center
-        
-        let title = String (format: "%.0f", Float(value))
+
+        let title = String (format: "%.0f%%", Float(value))
         
         let centerText = NSMutableAttributedString (string: title)
         centerText.setAttributes(

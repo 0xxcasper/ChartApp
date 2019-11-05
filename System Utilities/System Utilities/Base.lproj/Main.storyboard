@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDS-S4-Yfi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDS-S4-Yfi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,7 +120,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-8U-UMS">
                                                     <rect key="frame" x="0.0" y="130" width="160" height="30"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-z5-fx6">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU &amp; Processes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc8-z5-fx6">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="30"/>
                                                             <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
@@ -1225,16 +1225,16 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                                     <constraint firstItem="w2m-mz-k3D" firstAttribute="top" secondItem="Iwb-gT-izy" secondAttribute="top" constant="68" id="zMr-Ep-xLc"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yld-UF-bvW" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="4" y="308" width="117" height="120"/>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yld-UF-bvW" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="14.5" y="308" width="110" height="107"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="117" id="ftC-C8-iBT"/>
-                                    <constraint firstAttribute="height" constant="120" id="hIa-VR-A57"/>
+                                    <constraint firstAttribute="width" constant="110" id="ftC-C8-iBT"/>
+                                    <constraint firstAttribute="height" constant="107" id="hIa-VR-A57"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdc-dS-b9c">
-                                <rect key="frame" x="17.5" y="434" width="90" height="21"/>
+                                <rect key="frame" x="24.5" y="421" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="wam-3c-ixs"/>
                                     <constraint firstAttribute="width" constant="90" id="wfN-Mg-wc3"/>
@@ -1244,11 +1244,11 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rE-aO-cS9" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="129" y="308" width="117" height="120"/>
+                                <rect key="frame" x="132.5" y="308" width="110" height="107"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="System" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1D-Sd-127">
-                                <rect key="frame" x="142.5" y="434" width="90" height="21"/>
+                                <rect key="frame" x="142.5" y="421" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3St-w7-OKH"/>
                                     <constraint firstAttribute="width" constant="90" id="DRM-EA-nsV"/>
@@ -1258,7 +1258,7 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSZ-AQ-VPT">
-                                <rect key="frame" x="267.5" y="434" width="90" height="21"/>
+                                <rect key="frame" x="260.5" y="421" width="90" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="eyh-v7-Xcr"/>
                                     <constraint firstAttribute="height" constant="21" id="mcY-SU-76W"/>
@@ -1268,20 +1268,20 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeH-EV-be4" customClass="PieChartView" customModule="Charts">
-                                <rect key="frame" x="254" y="308" width="117" height="120"/>
+                                <rect key="frame" x="250.5" y="308" width="110" height="107"/>
                                 <color key="backgroundColor" red="0.71372549019999998" green="0.72156862749999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qeH-EV-be4" firstAttribute="top" secondItem="Iwb-gT-izy" secondAttribute="bottom" constant="20" id="3ht-fN-kER"/>
                             <constraint firstItem="8rE-aO-cS9" firstAttribute="width" secondItem="yld-UF-bvW" secondAttribute="width" id="79x-jB-g2P"/>
                             <constraint firstItem="8rE-aO-cS9" firstAttribute="top" secondItem="Iwb-gT-izy" secondAttribute="bottom" constant="20" id="BoY-ad-4pC"/>
                             <constraint firstItem="Iwb-gT-izy" firstAttribute="centerX" secondItem="Bw0-qm-fcq" secondAttribute="centerX" id="G9y-be-gVU"/>
-                            <constraint firstItem="yld-UF-bvW" firstAttribute="top" secondItem="Iwb-gT-izy" secondAttribute="bottom" constant="20" id="MQg-tM-p3o"/>
                             <constraint firstItem="Iwb-gT-izy" firstAttribute="top" secondItem="UIs-Cp-HGv" secondAttribute="top" id="Usf-Ng-Nd5"/>
+                            <constraint firstItem="XSZ-AQ-VPT" firstAttribute="centerX" secondItem="qeH-EV-be4" secondAttribute="centerX" id="VG0-Oh-RNQ"/>
                             <constraint firstItem="qeH-EV-be4" firstAttribute="leading" secondItem="8rE-aO-cS9" secondAttribute="trailing" constant="8" id="WKp-Gt-enu"/>
-                            <constraint firstItem="XSZ-AQ-VPT" firstAttribute="centerX" secondItem="qeH-EV-be4" secondAttribute="centerX" id="cUy-ld-dxW"/>
+                            <constraint firstItem="kdc-dS-b9c" firstAttribute="centerX" secondItem="yld-UF-bvW" secondAttribute="centerX" id="Xri-lg-GmO"/>
+                            <constraint firstItem="yld-UF-bvW" firstAttribute="centerY" secondItem="8rE-aO-cS9" secondAttribute="centerY" id="aTJ-sN-Itn"/>
                             <constraint firstItem="Iwb-gT-izy" firstAttribute="width" secondItem="UIs-Cp-HGv" secondAttribute="width" id="ebL-Ss-efd"/>
                             <constraint firstItem="8rE-aO-cS9" firstAttribute="leading" secondItem="yld-UF-bvW" secondAttribute="trailing" constant="8" id="fdz-7b-vKp"/>
                             <constraint firstItem="qeH-EV-be4" firstAttribute="height" secondItem="8rE-aO-cS9" secondAttribute="height" id="hIm-ZY-Y71"/>
@@ -1290,7 +1290,7 @@ VG90YWwgZGlzayBzCAgIcGFjZQ
                             <constraint firstItem="X1D-Sd-127" firstAttribute="top" secondItem="8rE-aO-cS9" secondAttribute="bottom" constant="6" id="odn-Mb-UyW"/>
                             <constraint firstItem="XSZ-AQ-VPT" firstAttribute="top" secondItem="qeH-EV-be4" secondAttribute="bottom" constant="6" id="pQU-k8-jQK"/>
                             <constraint firstItem="8rE-aO-cS9" firstAttribute="height" secondItem="yld-UF-bvW" secondAttribute="height" id="pzZ-R0-OnX"/>
-                            <constraint firstItem="kdc-dS-b9c" firstAttribute="centerX" secondItem="yld-UF-bvW" secondAttribute="centerX" id="s92-n9-AYt"/>
+                            <constraint firstItem="qeH-EV-be4" firstAttribute="centerY" secondItem="8rE-aO-cS9" secondAttribute="centerY" id="vkR-Qd-hOj"/>
                             <constraint firstItem="qeH-EV-be4" firstAttribute="width" secondItem="8rE-aO-cS9" secondAttribute="width" id="xEq-cA-K0j"/>
                             <constraint firstItem="kdc-dS-b9c" firstAttribute="top" secondItem="yld-UF-bvW" secondAttribute="bottom" constant="6" id="zUA-jp-PG0"/>
                         </constraints>

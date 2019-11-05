@@ -73,6 +73,7 @@ class BatteryViewController: BasePieViewController, UITableViewDelegate, UITable
         let data = PieChartData(dataSet: dataSet)
         self.chartView.data = data
         self.chartView.highlightValues(nil)
+        self.chartView.usePercentValuesEnabled = true
     }
     
     // MARK: - UITableViewDelegate & DataSource
