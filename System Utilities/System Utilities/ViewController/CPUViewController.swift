@@ -164,7 +164,7 @@ class CPUViewController: BaseHeaderViewController, CPUInfoControllerDelegate {
         chartView.holeRadiusPercent = 0.85
         chartView.transparentCircleRadiusPercent = 0
 //        chartView.descriptionText = ""
-        chartView.setExtraOffsets(left: -20, top: -20, right: -20, bottom: -20)
+        chartView.setExtraOffsets(left: -10, top: -10, right: -10, bottom: -10)
         chartView.drawCenterTextEnabled = true
         chartView.holeColor = UIColor.clear
     }

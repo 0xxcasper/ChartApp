@@ -15,7 +15,7 @@ DEPENDENCIES:
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Charts
     - Flurry-iOS-SDK
     - iRate
@@ -29,4 +29,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 33b200ce25e7c48df8d304c3e034929632b9259e
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.8.3

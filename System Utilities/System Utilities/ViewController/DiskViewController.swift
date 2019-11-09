@@ -81,6 +81,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     }
     
     private func drawData() {
+        self.chartView.usePercentValuesEnabled = true
         self.chartView.drawCenterTextEnabled = false
         self.chartView.rotationAngle = 90
         self.chartView.rotationEnabled = true
@@ -106,10 +107,11 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
             UIColor(red:0.37, green:0.89, blue:0.8, alpha:1),
             UIColor(red:0.55, green:0.68, blue:0.88, alpha:1)
         ]
-        
-        let data = PieChartData(dataSet: dataSet)
-        self.chartView.data = data
-        self.chartView.highlightValues(nil)
+        DispatchQueue.main.async {
+            let data = PieChartData(dataSet: dataSet)
+            self.chartView.data = data
+            self.chartView.highlightValues(nil)
+        }
     }
     
     // MARK: - UITableViewDelegate & DataSource
