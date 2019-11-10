@@ -78,13 +78,15 @@ class MemoryViewController: BasePieViewController, UITableViewDelegate, UITableV
             dataEntries.append(BarChartDataEntry(x: Double(i), y: values[i]))
         }
         
-        let dataSet = PieChartDataSet(entries: dataEntries, label: "")
-        dataSet.drawValuesEnabled = false
-        dataSet.colors = self.pieColors
-        
-        let data = PieChartData(dataSet: dataSet)
-        self.chartView.data = data
-        self.chartView.highlightValues(nil)
+        DispatchQueue.main.async {
+            let dataSet = PieChartDataSet(entries: dataEntries, label: "")
+            dataSet.drawValuesEnabled = false
+            dataSet.colors = self.pieColors
+            
+            let data = PieChartData(dataSet: dataSet)
+            self.chartView.data = data
+            self.chartView.highlightValues(nil)
+        }
     }
     
     // MARK: - UITableViewDelegate & DataSource

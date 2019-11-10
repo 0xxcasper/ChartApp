@@ -155,7 +155,9 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     // MARK: - StorageInfoControllerDelegate
     
     func storageInfoUpdated() {
-        SVProgressHUD.dismiss()
-        self.tableView.reloadData()
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+            self.tableView.reloadData()
+        }
     }
 }
