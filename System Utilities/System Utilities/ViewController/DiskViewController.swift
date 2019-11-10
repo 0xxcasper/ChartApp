@@ -17,17 +17,13 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var usedSpaceLabel: UILabel!
     @IBOutlet weak var viewGradient: UIView!
     private var storageInfo: StorageInfo?
+    private var numOfRows = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Header
         self.headerView.backgroundColor = UIColor(red:0.23, green:0.86, blue:0.82, alpha:1)
-//            GradientColor(
-//                UIGradientStyle.TopToBottom,
-//                frame: CGRectMake(0, 0, ScreenSize.Width, CGFloat(self.heighHeaderView)),
-//                colors: [UIColor(red:0.23, green:0.86, blue:0.82, alpha:1),
-//                    UIColor(red:0.54, green:0.35, blue:0.85, alpha:1)])
         
         // Setup tableview
         let foolterView = UIView()
@@ -52,26 +48,31 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         self.usedSpaceLabel.text = SSDiskInfo.usedDiskSpace(false)
         
         // Get info
-        SystemMonitor.storageInfoCtrl().delegate = self
-        self.storageInfo = SystemMonitor.storageInfoCtrl().getStorageInfo()
-        if storageInfo!.totalPictureSize != 0 {
-            SVProgressHUD.show(withStatus: "updating")
+        DispatchQueue.global(qos: .background).async {
+            SystemMonitor.storageInfoCtrl().delegate = self
+            self.storageInfo = SystemMonitor.storageInfoCtrl().getStorageInfo()
+            if self.storageInfo!.totalPictureSize != 0 {
+                DispatchQueue.main.async {
+                    SVProgressHUD.show(withStatus: "updating")
+                }
+            }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
             PHPhotoLibrary.requestAuthorization({ (status) -> Void in
                 if status != PHAuthorizationStatus.authorized {
-                    UIAlertView.show(withTitle: "Permission require",
-                                     message: "Please enable photo permission access in setting", cancelButtonTitle: "Dismiss",
-                                     otherButtonTitles: ["Setting"],
-                                     tap: { (alertView, index) -> Void in
-                        if index == 0 { UIApplication.shared.openURL(NSURL(string:UIApplication.openSettingsURLString)! as URL);
-                        }
-                    })
+                    DispatchQueue.main.async {
+                        UIAlertView.show(withTitle: "Permission require",
+                                         message: "Please enable photo permission access in setting", cancelButtonTitle: "Setting",
+                                         otherButtonTitles: ["Dismiss"],
+                                         tap: { (alertView, index) -> Void in
+                            if index == 0 { UIApplication.shared.openURL(NSURL(string:UIApplication.openSettingsURLString)! as URL);
+                            }
+                        })
+                    }
                 } else {
                     // Request update info
                     self.storageInfo = SystemMonitor.storageInfoCtrl().getStorageInfo()
@@ -90,8 +91,8 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         l.enabled = false
         self.chartView.animate(xAxisDuration: 1.4, yAxisDuration: 1.4, easingOption: ChartEasingOption.easeOutBack)
         
-        let freeDisk = Float(SSDiskInfo.longFreeDiskSpace())/1024/1024
-        let fullDisk = Float(SSDiskInfo.longDiskSpace())/1024/1024
+        let freeDisk = Float(SystemValue.longFreeDiskSpace)/1024/1024
+        let fullDisk = Float(SystemValue.longDiskSpace)/1024/1024
         let freeDisPercent = Float((freeDisk * 100))/fullDisk;
         
         // Set data
@@ -117,7 +118,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     // MARK: - UITableViewDelegate & DataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return numOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -157,6 +158,7 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
     func storageInfoUpdated() {
         DispatchQueue.main.async {
             SVProgressHUD.dismiss()
+            self.numOfRows = 3
             self.tableView.reloadData()
         }
     }
