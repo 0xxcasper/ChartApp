@@ -21,6 +21,16 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Get info
+        DispatchQueue.global(qos: .background).async {
+            SystemMonitor.storageInfoCtrl().delegate = self
+            self.storageInfo = SystemMonitor.storageInfoCtrl().getStorageInfo()
+            if self.storageInfo!.totalPictureSize != 0 {
+                DispatchQueue.main.async {
+                    SVProgressHUD.show(withStatus: "updating")
+                }
+            }
+        }
         
         // Header
         self.headerView.backgroundColor = UIColor(red:0.23, green:0.86, blue:0.82, alpha:1)
@@ -46,17 +56,6 @@ class DiskViewController: BasePieViewController, UITableViewDelegate, UITableVie
         self.titleLabel.text = SSDiskInfo.diskSpace()
         self.freeSpaceLabel.text = SSDiskInfo.freeDiskSpace(false)
         self.usedSpaceLabel.text = SSDiskInfo.usedDiskSpace(false)
-        
-        // Get info
-        DispatchQueue.global(qos: .background).async {
-            SystemMonitor.storageInfoCtrl().delegate = self
-            self.storageInfo = SystemMonitor.storageInfoCtrl().getStorageInfo()
-            if self.storageInfo!.totalPictureSize != 0 {
-                DispatchQueue.main.async {
-                    SVProgressHUD.show(withStatus: "updating")
-                }
-            }
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
